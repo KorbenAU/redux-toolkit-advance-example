@@ -15,3 +15,12 @@ export const getAllUsers = async () => {
         throw error;
     }
 };
+
+export const getAllPosts = async () => {
+    try {
+        const response = await api.get("/posts");
+        return response.data;
+    } catch (error) {
+        throw error;
+    }
+};
